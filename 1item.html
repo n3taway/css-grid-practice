@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1. 网格自定义跨行跨列。</title>
+    <style>
+        .wrapper {
+            display: grid;
+            grid-template-rows: repeat(2, 1fr);
+            grid-template-columns: repeat(3, 1fr);
+            width: 300px;
+            border: 1px solid gray;
+            /*  grid-auto-flow: row; */
+            /*  grid-auto-flow: column; */
+            /*  grid-auto-flow: row dense; 跨行后紧密 */
+            /*  grid-auto-flow: column dense; 跨列后紧密 */
+        }
+
+        .wrapper div {
+            border: 1px solid gray;
+            height: 100px;
+        }
+
+        .item1 {
+            grid-column-start: 1;
+            grid-column-end: 3;
+            /*  同时跨行跨列。 */
+            /* grid-row-start: 3;  当前项目行从第3条行网格线开始 */
+            /* grid-column-end: 1;  当前项目列在第1条列网格线结束 */
+            /*  同时跨行跨列。 */
+            /* grid-row-start: 2;  当前项目行从第2条行网格线开始 */
+            /* grid-column-end: 1;  当前项目列在第1条列网格线结束 */
+            background-color: rgb(127, 255, 238);
+        }
+
+        .item2 {
+            background-color: rgb(169, 211, 197);
+        }
+
+        .item3 {
+            background-color: rgb(152, 168, 113);
+        }
+
+        .item4 {
+            background-color: rgb(168, 140, 113);
+        }
+
+        .item5 {
+            background-color: rgb(209, 241, 194);
+        }
+
+        .item6 {
+            background-color: rgb(168, 113, 150);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="item1">1</div>
+        <div class="item2">2</div>
+        <div class="item3">3</div>
+        <div class="item4">4</div>
+        <div class="item5">5</div>
+        <div class="item6">6</div>
+    </div>
+</body>
+
+</html>

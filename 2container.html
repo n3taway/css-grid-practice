@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2. grid-template-areas + grid-area 指定区域布局。</title>
+    <style>
+        .layout {
+            width: 300px;
+            height: 300px;
+            display: grid;
+            /* 三行四列 */
+            grid-template-areas:
+                "hd hd   hd   hd"
+                "sd main main main"
+                "ft ft   ft   ft";
+        }
+
+        .layout div {
+            border: 1px solid gray;
+        }
+
+        .header {
+            grid-area: hd;
+        }
+
+        .sidebar {
+            grid-area: sd;
+        }
+
+        .content {
+            grid-area: main;
+        }
+
+        .footer {
+            grid-area: ft;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="layout">
+        <!-- 顺序无关 -->
+        <div class="footer">Footer</div>
+        <div class="sidebar">Sidebar</div>
+        <div class="content">Content</div>
+        <div class="header">Header</div>
+    </div>
+</body>
+
+</html>

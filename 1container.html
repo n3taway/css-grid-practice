@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1. grid 基础属性。</title>
+    <style>
+        
+        .layout {
+            width: 300px;
+            height: 300px;
+            display: grid;
+            /* n行布局 */
+            /* grid-template-rows: 10px 10px ... (n)px */
+            /* n列布局 */
+            /* grid-template-columns: 10px 10px ... (n)px; */
+
+            /* n行 * n列 布局 */
+            /* grid-template-rows: 10px 10px ... (n)px */
+            /* grid-template-columns: 10px 10px ... (n)px; */
+
+
+            /* 两份 平均分配。 */
+            /* grid-template-columns: 1fr 1fr; */
+
+            /* 三份 后者是前者的两倍。 */
+            /* grid-template-columns: 1fr 2fr; */
+
+            /* 一列大小 = (100% - 100px) / 3 */
+            grid-template-columns: 1fr 2fr 100px;
+
+            /* 两边固定 中间自适应。 */
+            /* grid-template-columns: 100px auto 100px; */
+
+            /* 12列平均分配。 */
+            /* grid-template-columns: repeat(12, 1fr); */
+
+            /* 行间隙 */
+            /* row-gap: 10px; */
+
+            /* 列间隙 */
+            /* column-gap: 10px; */
+
+            /* 行列属性复合间隙 */
+            /* gap: 10px 10px; */
+
+            /* 行列间隙相同 */
+            /* gap: 10px; */
+        }
+        .layout div {
+            background-color: rgba(0, 0, 0, 0.192);
+            border: 1px solid rgba(0, 0, 0, 0.192);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="layout">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+</body>
+
+</html>

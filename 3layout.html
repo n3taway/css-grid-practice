@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3. 上中下结构，内容是侧边的倍数。</title>
+    <style>
+        .wrapper {
+            display: grid;
+            grid-template-areas:
+                "hd hd   hd   hd"
+                "sdl main main sdr"
+                "ft ft   ft   ft";
+            width: 300px;
+            height: 400px;
+        }
+
+        .wrapper div {
+            border: 1px solid gray;
+        }
+
+        .header {
+            grid-area: hd;
+        }
+
+        .sidebarLeft {
+            grid-area: sdl;
+        }
+
+        .sidebarRight {
+            grid-area: sdr;
+        }
+
+        .content {
+            grid-area: main;
+        }
+
+        .footer {
+            grid-area: ft;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="header">Header</div>
+        <div class="sidebarLeft">Sidebar</div>
+        <div class="content">Content</div>
+        <div class="sidebarRight">Sidebar</div>
+        <div class="footer">Footer</div>
+    </div>
+</body>
+
+</html>
